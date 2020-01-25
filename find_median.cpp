@@ -5,52 +5,42 @@
  * 01/27/2020
 **********************************************/
 
-#include <stdlib.h>
+#include <iostream>
 #include <vector>
 
-namespace std
+/**
+ * Finds median of vector
+ * 
+ * @param   input                   The input <tt>vector</tt>.
+ * 
+ * @returns <tt>int</tt> median     On success.
+ * @returns <tt>int</tt> -1         On failure.
+ * 
+ * */
+int find_median(std::vector<int> input)
 {
-    /**
-     * Finds median of vector
-     * 
-     * @param   input                   The input <tt>vector</tt>.
-     * 
-     * @returns <tt>int</tt> median     On success.
-     * @returns <tt> int</tt> -1        On failure.
-     * 
-     * */
-    int find_median(vector input)
+    int input_size = input.size();
+    if(input_size > 0)
     {
-        int input_size = vector::size(input);
-        if(input_size) <= 0)
-        {
-            return -1;
-        }
-        else
-        {
-            for (i = 0; i < input_size; i++)
-            {
-                if((input_size / i) == 2)
-                {
-                    return input[i];
-                }
-            }
-        }
-        
+        return input[input_size / 2];
     }
-    int main(int argc, char **argv)
+
+    // return -1 if vector is empty or other error occurs
+    return -1;
+}
+
+int main(int argc, char **argv)
+{
+
+    std::vector<int> my_vector = {1, 2, 3, 4, 4, 5, 6, 7, 7, 7, 8, 9, 10};
+    int median = 0;
+
+    if (!my_vector.empty())
     {
-
-        vector my_vector = {1, 2, 3, 4, 4, 5, 6, 7, 7, 7, 8, 9, 10};
-        int median = 0;
-
-        if (my_vector != NULL)
-        {
-            median = find_median(my_vector);
-        }
-
-        printf("Median of vector = %d\n", median);
-        
-        return 0;
+        median = find_median(my_vector);
     }
+
+    printf("Median of vector = %d\n", median);
+    
+    return 0;
 }
