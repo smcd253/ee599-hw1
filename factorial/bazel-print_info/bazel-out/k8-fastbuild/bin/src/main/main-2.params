@@ -1,0 +1,14 @@
+-o
+bazel-out/k8-fastbuild/bin/src/main/main
+-Wl,-S
+-fuse-ld=gold
+-Wl,-no-as-needed
+-Wl,-z,relro,-z,now
+-B/usr/bin
+-pass-exit-codes
+-lstdc++
+-lm
+bazel-out/k8-fastbuild/bin/src/main/_objs/main/main.pic.o
+-Wl,--start-lib
+bazel-out/k8-fastbuild/bin/src/lib/_objs/SolutionLib/solution.pic.o
+-Wl,--end-lib
