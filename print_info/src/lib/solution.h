@@ -7,6 +7,13 @@
 class Solution {
 public:
   std::string PrintHelloWorld();
+
+  /**
+   * Returns user information (a pre-defined set of strings).
+   * 
+   * @returns <tt>string</tt> (information)             On success.
+   * 
+   * */
   std::string print_info();
 };
 
