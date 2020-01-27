@@ -1,9 +1,5 @@
 #include "solution.h"
 
-std::string Solution::PrintHelloWorld() { 
-  return "**** Hello World ****"; 
-}
-
 int Solution::Factorial(int n)
 {
   int result = 1;

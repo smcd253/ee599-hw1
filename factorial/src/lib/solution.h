@@ -6,9 +6,7 @@
 
 class Solution {
 public:
-  std::string PrintHelloWorld();
   int Factorial(int n);
-
   int Factorial_Recursive(int n);
 };
 
