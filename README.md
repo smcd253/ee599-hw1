@@ -1,21 +1,25 @@
 # ee599-hw1
-# Spencer McDonough
-# 01/27/2020
+**Spencer McDonough**<br>
+**01/27/2020**<br>
 
+# Clone this repository
+```
+git clone https://github.com/smcd253/ee599-hw1.git
+```
 # Question 1 - 15 points (Medium)
 *Use proof by contradiction to prove that the FindMax function always finds the maximum value in the input vector for non empty input vectors.*
 
 if result is not the maximum in the input vector, then there exists an element in the input vector that is larger than result
 
 r &#8714; Z &and; inputs = {n: n &#8714; (-&infin;,&infin;), n &#8714; Z} (assumption) <br>
-r = FindMax(inputs) (assumption) <br>
+r= FindMax(inputs) (assumption) <br>
 &exist; m &#8714; inputs : m > r (claim) <br>
 
 FindMax(inputs) = {r : r > n &forall;n &#8714; inputs} (definition of FindMax) <br>
-m &#8714; inputs &and; m > max(inputs) <br>
+m &#8714; inputs &and; m > FindMax(inputs) <br>
 &#8658; m &#8714; inputs &and; m > {r : r > n &forall;n &#8714; inputs} <br>
 &#8658; m &#8714; inputs &and; m &#8714; {m : m > {r : r > n &forall;n &#8714; inputs}} <br>
-&#8658; m &#8714; inputs &and; m &#8714; &empty; = &#8869;
+&#8658; m &#8714; inputs &and; m &#8714; &empty; = &#8869; <br>
 
 &there4; FindMax always finds the maximum
 
